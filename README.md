@@ -1,6 +1,5 @@
 # DjangoBasic
 
-
 Based on https://djangocentral.com/create-a-hello-world-django-application/
 
 ```bash
@@ -149,6 +148,10 @@ def index(request):
 python manage.py runserver
 ```
 
+```bash
+nano my_app/static/style.css
+```
+
 ```css
 .landing-section {
   min-height: 100vh;
@@ -220,6 +223,9 @@ python manage.py runserver
 
 ```
 
+```bash
+nano my_app/templates/index.html
+```
 
 ```html
 {% load static %}
@@ -262,4 +268,55 @@ python manage.py runserver
     </ul>
   </section>
 </section>
+```
+
+The final structure should look like ...
+
+```bash
+tree
+```
+
+```bash
+.
+├── db.sqlite3
+├── helloworld
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── settings.cpython-310.pyc
+│   │   ├── urls.cpython-310.pyc
+│   │   └── wsgi.cpython-310.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+└── my_app
+    ├── admin.py
+    ├── apps.py
+    ├── __init__.py
+    ├── migrations
+    │   ├── __init__.py
+    │   └── __pycache__
+    │       └── __init__.cpython-310.pyc
+    ├── models.py
+    ├── __pycache__
+    │   ├── admin.cpython-310.pyc
+    │   ├── apps.cpython-310.pyc
+    │   ├── __init__.cpython-310.pyc
+    │   ├── models.cpython-310.pyc
+    │   └── views.cpython-310.pyc
+    ├── static
+    │   └── style.css
+    ├── templates
+    │   └── index.html
+    ├── tests.py
+    └── views.py
+
+```
+
+Run the server again
+
+```bash
+python manage.py runserver
 ```
