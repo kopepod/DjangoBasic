@@ -23,6 +23,7 @@ pip install Django
 mkdir project
 cd project
 django-admin startproject helloworld .
+cd helloworld
 python manage.py migrate
 python manage.py runserver
 tree
@@ -89,7 +90,7 @@ def index(request):
 Modify the urls.py file
 
 ```bash
-nano helloworld/urls.py
+nano settings/urls.py
 ```
 
 ```python
